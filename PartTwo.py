@@ -1,3 +1,14 @@
-money = int(input("Please insert cash or change."))
+wallet = 0
 
-if money == 0.05 or money == 0.10 or money == 0.20 or money == 0.50 or money >= 1:
+while wallet < 75:
+    if wallet >= 75:
+        break
+    else:
+        print("The price of the coffee is 75p.")
+        print(f"You have", wallet, "in credit.")
+        more = int(input("Please insert a coin."))
+        wallet += more
+
+wallet = wallet - 75
+print("Enjoy your coffee.")
+print("Your change is", wallet)
